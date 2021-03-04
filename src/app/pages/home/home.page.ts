@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { Information } from '../models/information';
-import { InformationService } from '../services/information-service.service'
+import { Information } from '../../models/information';
+import { InformationService } from '../../services/information.service'
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -8,5 +9,10 @@ import { InformationService } from '../services/information-service.service'
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  constructor() {}
+  constructor(private router: Router) {}
+
+
+  public clickCountry(){
+    this.router.navigate(['/search']);
+  }
 }

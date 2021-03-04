@@ -1,0 +1,42 @@
+ion-searchbar {
+  margin: 24px 10px 10px 0;
+}
+
+ion-title {
+  background: #3a7be0;
+  color: #ffffff;
+  padding: 20px 20px;
+}
+
+.listCountry {
+  margin-top: 24px;
+}
+
+ion-avatar {
+  display: flex;
+  margin: 0;
+  align-items: center;
+}
+
+ion-avatar img {
+  height: 30px;
+  width: 30px;
+  margin-left: 10px;
+}
+
+.containerItem {
+  display: flex;
+  flex-direction: row;
+}
+
+.containerItem h3 {
+  text-align: left;
+  font-size: 14px;
+}
+
+.btn-align {
+  width: 100%;
+  background-color: #ffffff;
+  color: #0d0d0d;
+}
+

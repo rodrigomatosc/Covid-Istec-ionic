@@ -1,0 +1,55 @@
+ion-list {
+  margin-top: 10px;
+}
+
+ion-card {
+  margin: 8px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.titleAvartarContainer{
+  display: flex;
+  align-items: center;
+  vertical-align: center;
+  flex-direction: row;
+}
+
+.titleAvartarContainer h1{
+  font-size: 18px;
+  margin: 0 20px 0 0;
+  text-align: left;
+  font-weight: bold;
+}
+
+.titleAvartarContainer ion-avatar{
+  width: 30px;
+  height: 30px;
+}
+
+.dataItem h3 {
+  color: #AAA9AB;
+  text-align: left;
+  font-size: 12px;
+}
+
+.dataItem h2 {
+  margin-top: 8px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.confirmed {
+  color: #3AC4FF;
+}
+
+.recovered {
+  color: #34CCB8;
+}
+
+.death {
+  color: #FF6B72;
+}
+

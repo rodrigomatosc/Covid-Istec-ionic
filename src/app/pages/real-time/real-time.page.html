@@ -1,0 +1,81 @@
+<ion-content>
+  <ion-list lines="none">
+    <ion-item>
+      <ion-card>
+        <!--         Header      --->
+        <ion-item>
+          <ion-label class="titleAvartarContainer">
+            <h1>
+              {{information?.country}}
+            </h1>
+            <ion-avatar slot="end">
+              <img src="https://restcountries.eu/data/bra.svg">
+            </ion-avatar>
+          </ion-label>
+        </ion-item>
+
+        <!--         Capital and Continent      --->
+        <ion-item class="dataItem">
+            <ion-label>
+              <h3>Capital</h3>
+              <h2>{{information?.capitalCity || "-------"}}</h2>
+            </ion-label>
+            <ion-label>
+              <h3>Continent</h3>
+              <h2>{{information?.continent}}</h2>
+            </ion-label>
+        </ion-item>
+
+        <!--         Covid data      --->
+        <ion-item-group  class="dataItem">
+          <ion-item class="covid">
+            <ion-label>
+              <h3>Confirmed</h3>
+              <h2 class="confirmed">{{information?.confirmed}}</h2>
+            </ion-label>
+            <ion-label>
+              <h3>Recovered</h3>
+              <h2 class="recovered">{{information?.recovered}}</h2>
+            </ion-label>
+            <ion-label>
+              <h3>Deaths</h3>
+              <h2 class="death">{{information?.deaths}}</h2>
+            </ion-label>
+          </ion-item>
+        </ion-item-group>
+
+        <!--         Country Data      --->
+        <ion-item-group class="dataItem">
+          <ion-item>
+            <ion-label>
+              <h3>Population:</h3>
+              <h2>{{information?.population}}</h2>
+            </ion-label>
+           <ion-label>
+             <h3>lat/long:</h3>
+             <h2>
+               {{information?.population}}
+             </h2>
+           </ion-label>
+          </ion-item>
+        </ion-item-group>
+        <ion-item-group class="dataItem">
+          <ion-item>
+          <ion-label>
+            <h3>Life Expectancy:</h3>
+            <h2>
+              {{information?.lifeExpectancy || "------" }}
+            </h2>
+          </ion-label>
+          <ion-label>
+            <h3>last Update:</h3>
+            <h2>
+              {{information?.updated || "-------"}}
+            </h2>
+          </ion-label>
+          </ion-item>
+        </ion-item-group>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+</ion-content>

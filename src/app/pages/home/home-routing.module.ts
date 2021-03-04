@@ -9,20 +9,19 @@ const routes: Routes = [
     children: [
       {
         path: 'realTime',
-        loadChildren: () => import('../real-time/real-time.module').then( m => m.RealTimePageModule)
+        loadChildren: () => import('../real-time/real-time.module').then(m => m.RealTimePageModule)
       },
       {
         path: 'history',
-        loadChildren: () => import('../history/history.module').then( m => m.HistoryPageModule)
+        loadChildren: () => import('../history/history.module').then(m => m.HistoryPageModule)
       },
-    ]
+    ],
   },
   {
     path: '',
-    redirectTo:'home/realTime',
+    redirectTo: 'home/realTime',
     pathMatch: 'full'
   }
-
 ];
 
 
