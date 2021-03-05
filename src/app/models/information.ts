@@ -5,13 +5,18 @@ export class Information {
   deaths: number;
   country: string;
   population: number;
-  lifeExpectancy: string;
+  // tslint:disable-next-line:variable-name
+  life_expectancy: string;
   continent: string;
   abbreviation: string;
   location: string;
-  capitalCity: string;
+  // tslint:disable-next-line:variable-name
+  capital_city: string;
   lat: string;
   long: string;
   updated: string;
-  dates: string [];
+  dates: {
+    date: string;
+    value: number;
+  };
 }

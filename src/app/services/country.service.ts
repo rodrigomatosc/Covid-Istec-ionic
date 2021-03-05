@@ -9,11 +9,16 @@ import {Country} from '../models/country';
 export class CountryService {
 
   private url = 'https://restcountries.eu/rest/v2/all';
+  countries: Country[];
 
   constructor(private httpClient: HttpClient) { }
 
   public get(): Observable<Country[]>{
-    return this.httpClient.get<Country[]>(this.url);
+    return this.httpClient.get<Country[]>(this.url)
+  }
+
+  public setCountiesCast(countries: Country[]){
+    this.countries = countries;
   }
 
 }

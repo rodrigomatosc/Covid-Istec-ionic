@@ -10,11 +10,17 @@ import {map, tap} from 'rxjs/operators';
 })
 export class InformationService {
 
-  private url = 'https://covid-api.mmediagroup.fr/v1/cases?country=Brazil';
+  private urlRealTime = 'https://covid-api.mmediagroup.fr/v1/cases?country=';
+  private urlHistory = 'https://covid-api.mmediagroup.fr/v1/history?country=';
+
 
   constructor(private httpClient: HttpClient) { }
 
-  public get(): Observable<Informations>{
-    return this.httpClient.get<Informations>(this.url);
+  public getRealTime(country: string): Observable<Informations>{
+    return this.httpClient.get<Informations>(`${this.urlRealTime}${country}`);
+  }
+
+  public getHistory(country: string, type: string): Observable<Informations>{
+    return this.httpClient.get<Informations>(`${this.urlHistory}${country}&status=Recovered`);
   }
 }

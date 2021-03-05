@@ -1,15 +1,35 @@
-ion-searchbar {
-  margin: 24px 10px 10px 0;
-}
 
 ion-title {
-  background: #3a7be0;
-  color: #ffffff;
+  display: flex;
+  color: rgba(32,130,200,0.8);
+  background-color: #ffffff;
   padding: 20px 20px;
+  font-family: "Open Sans";
+  align-items: center;
+  text-align: center;
+}
+
+
+ion-back-button {
+    display: flex;
+   --color:rgba(32,130,200,0.8) ;
+  --border-radius: 0px;
+}
+
+.toolbarSearch {
+  display: flex;
+  background-color: #FBFBFD;
+  font-family: "Open Sans";
+}
+
+ion-searchbar {
+  justify-content: center;
+  --background: #ffffff;
+  margin: 10px;
 }
 
 .listCountry {
-  margin-top: 24px;
+  margin-top: 16px;
 }
 
 ion-avatar {

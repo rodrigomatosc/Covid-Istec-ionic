@@ -1,9 +1,58 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>history</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+  <ion-select (ionChange)="changeType()" [(ngModel)]="type" value="Confirmed" okText="Confirm" cancelText="Cancel">
+    <ion-select-option value="Confirmed">Confirmed</ion-select-option>
+    <ion-select-option value="Deaths">Deaths</ion-select-option>
+    <ion-select-option value="Recovered">Recovered</ion-select-option>
+  </ion-select>
 
+  <!--         Header      --->
+  <ion-item *ngIf="country">
+    <ion-label class="titleAvartarContainer">
+      <h1>
+        {{country?.name}}
+      </h1>
+      <ion-avatar slot="end">
+        <img src="{{country?.flag}}">
+      </ion-avatar>
+    </ion-label>
+  </ion-item>
+  <!--         Capital and Continent      --->
+  <ion-item class="dataItem">
+    <ion-label>
+      <h3>Capital</h3>
+      <h2>{{information?.capital_city || "-------"}}</h2>
+    </ion-label>
+    <ion-label>
+      <h3>Continent</h3>
+      <h2>{{information?.continent || "------"}}</h2>
+    </ion-label>
+  </ion-item>
+
+  <!--         Country Data      --->
+  <ion-item-group class="dataItem">
+    <ion-item>
+      <ion-label>
+        <h3>Population:</h3>
+        <h2>{{information?.population || "------"}}</h2>
+      </ion-label>
+      <ion-label>
+        <h3>Life Expectancy:</h3>
+        <h2>
+          {{information?.life_expectancy || "------" }}
+        </h2>
+      </ion-label>
+    </ion-item>
+  </ion-item-group>
+  <ion-list>
+    <IonListHeader lines="full">
+      <IonLabel>Date</IonLabel>
+      <IonLabel>{{type}}</IonLabel>
+    </IonListHeader>
+    <ion-item *ngFor="let date of dates">
+      <div class="itemDates">
+        <h2>{{date.key}}</h2>
+        <h2>{{date.value}}</h2>
+      </div>
+    </ion-item>
+  </ion-list>
 </ion-content>

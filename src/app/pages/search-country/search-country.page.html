@@ -1,19 +1,24 @@
 <ion-header>
   <ion-toolbar>
+
+      <div slot="start">
+        <ion-back-button></ion-back-button>
+      </div>
+
     <ion-title>
       Select a Country
     </ion-title>
   </ion-toolbar>
-  <ion-toolbar>
+  <div class="toolbarSearch">
     <ion-searchbar
       [(ngModel)]="value"
       (ionChange)="filterCountry($event)"
     ></ion-searchbar>
-  </ion-toolbar>
+  </div>
+
 </ion-header>
 
 <ion-content>
-
   <ion-list class="listCountry" lines="none">
     <button  class="btn-align" (click)="selectItem(country)" *ngFor="let country of countries">
            <div class="containerItem">

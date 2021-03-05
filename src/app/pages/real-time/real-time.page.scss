@@ -21,6 +21,7 @@ ion-card {
   margin: 0 20px 0 0;
   text-align: left;
   font-weight: bold;
+  font-family: "Open Sans";
 }
 
 .titleAvartarContainer ion-avatar{
@@ -32,13 +33,16 @@ ion-card {
   color: #AAA9AB;
   text-align: left;
   font-size: 12px;
+  font-family: "Open Sans";
 }
 
 .dataItem h2 {
   margin-top: 8px;
   text-align: left;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: "Open Sans";
 }
 
 .confirmed {

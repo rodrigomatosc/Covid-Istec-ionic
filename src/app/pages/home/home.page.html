@@ -1,17 +1,17 @@
 
-<ion-header>
-  <ion-toolbar class="jolly-toolbar">
-    <ion-title>
+<ion-header class="header">
+  <ion-toolbar class="toolbar-header">
+    <h2>
       Covid-19
-    </ion-title>
+    </h2>
   </ion-toolbar>
-  <ion-toolbar class="jolly-toolbar">
-    <ion-title>
-      Let's Change Me
-    </ion-title>
+  <ion-toolbar class="toolbar-header">
+    <h4>
+      Protect yourself and others around you by knowing the facts and taking appropriate precautions. Follow advice provided by your local health authority.
+    </h4>
   </ion-toolbar>
-  <ion-toolbar class="jolly-toolbar">
-    <ion-button (click)="clickCountry()" color="white" class="btnSelectCountry">Select a country</ion-button>
+  <ion-toolbar class="toolbar-header">
+    <ion-button (click)="clickCountry()" color="white" class="btnSelectCountry">{{country?.name || "Select a country"}}</ion-button>
   </ion-toolbar>
 </ion-header>
 

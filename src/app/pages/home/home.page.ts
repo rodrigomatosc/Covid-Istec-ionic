@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { Information } from '../../models/information';
-import { InformationService } from '../../services/information.service'
-import {Router} from '@angular/router';
+import {Router, NavigationExtras} from '@angular/router';
+import {Country} from '../../models/country';
+import {CountryProviderService} from '../../services/country-provider.service';
 
 @Component({
   selector: 'app-home',
@@ -9,9 +9,14 @@ import {Router} from '@angular/router';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  constructor(private router: Router) {}
+  country: Country;
 
-
+  constructor(private router: Router, private countryProvider: CountryProviderService) {
+    countryProvider.newObservable().subscribe((country: Country) => {
+      this.country = country;
+    });
+  }
+  
   public clickCountry(){
     this.router.navigate(['/search']);
   }
